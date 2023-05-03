@@ -100,13 +100,13 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
-                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
@@ -268,7 +268,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                        <img class="rounded-circle" src="{{asset('template/img/undraw_profile_1.svg')}}"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -280,7 +280,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                        <img class="rounded-circle" src="{{asset('template/img/undraw_profile_2.svg')}}"
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -292,7 +292,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                        <img class="rounded-circle" src="{{asset('template/img/undraw_profile_3.svg')}}"
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
@@ -410,14 +410,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('template/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('template/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{asset('template/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{asset('template/js/sb-admin-2.min.js')}}"></script>
 
 </body>
 
