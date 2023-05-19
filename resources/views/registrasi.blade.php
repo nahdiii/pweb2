@@ -37,28 +37,23 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" action="{{ url('simpan-registrasi') }}" method="POST">
+                                {{ csrf_field() }}
                                 <div class="form-group">
-                                    
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" class="form-control form-control-user" name="namapengguna" id="exampleFirstName"
                                             placeholder="Name">
-                                    
-                                    
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                    <input type="email" class="form-control form-control-user"  id="exampleInputEmail"
+                                        placeholder="Email Address" name="emailpengguna">
                                 </div>
                                 <div class="form-group">
-                                    
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
-                                    
-                                    
+                                            id="exampleInputPassword" name="passwordpengguna" placeholder="Password">
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Register Account
-                                </a>
+                                </button>
                                 <hr>
                             </form>
                             <hr>
