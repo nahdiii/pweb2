@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -28,5 +29,25 @@ class LoginController extends Controller
        ]);
 
        return redirect ('login');
+    }
+
+    public function postLogin(Request $request)
+    {
+        if(Auth::attempt([
+                'email' => $request->email, 
+                'password' => $request->password
+            ])){
+
+            return redirect('/');
+        }
+        else{
+            return back();
+        }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('login');
     }
 }
