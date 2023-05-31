@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 
 
@@ -17,5 +18,9 @@ Route::get('/logout',[LoginController::class, 'logout']);
 Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/',[HomeController::class, 'index']);
+    // Route::get('/not-found',[HomeController::class, 'notFound']);
+    Route::get('/data-pengguna',[UserController::class, 'index']);
+    Route::get('/hapus-pengguna/{id}',[UserController::class, 'hapusPengguna']);
+    Route::get('/show-pengguna/{id}',[UserController::class, 'show']);
 
 });
