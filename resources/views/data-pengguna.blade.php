@@ -45,10 +45,12 @@
                                     </tr>
                                     @foreach ($usr as $item)
                                         <tr>
-                                            <td>...</td>
+                                            <td>
+                                                <img height="100px" width="70px"
+                                                src="{{asset('img/' . $item->foto )}}"></td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->email }}</td>
-                                            <td>Ubah | <a href="{{url('hapus-pengguna/'. $item->id)}}">Hapus</a> </td>
+                                            <td><a href="{{url('ubah-pengguna/'. $item->id)}}">Ubah</a> | <a href="{{url('hapus-pengguna/'. $item->id)}}">Hapus</a> </td>
                                         </tr>
                                     @endforeach
                                 </table>

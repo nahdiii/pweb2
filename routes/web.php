@@ -19,8 +19,10 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/',[HomeController::class, 'index']);
     // Route::get('/not-found',[HomeController::class, 'notFound']);
-    Route::get('/data-pengguna',[UserController::class, 'index']);
+    Route::get('/data-pengguna',[UserController::class, 'index'])->name('data-pengguna');
     Route::get('/hapus-pengguna/{id}',[UserController::class, 'hapusPengguna']);
     Route::get('/show-pengguna/{id}',[UserController::class, 'show']);
+    Route::get('/ubah-pengguna/{id}',[UserController::class, 'ubahPengguna']);
+    Route::post('/simpan-ubah-pengguna/{id}',[UserController::class, 'simpanUbahPengguna']);
 
 });
